@@ -6,12 +6,13 @@ import { QuizState } from '@/context/QuizContext';
 import { zodiacSigns } from '@/lib/quiz-data';
 import { HeroSection } from '@/components/results/HeroSection';
 import { InsightsSection } from '@/components/results/InsightsSection';
-import { TransitionSection } from '@/components/results/TransitionSection';
-import { OfferSection } from '@/components/results/OfferSection';
+import { RevelationSection } from '@/components/results/RevelationSection';
+import { WhatYouGetSection } from '@/components/results/WhatYouGetSection';
 import { SocialProofSection } from '@/components/results/SocialProofSection';
 import { GuaranteeSection } from '@/components/results/GuaranteeSection';
 import { FAQSection } from '@/components/results/FAQSection';
 import { FooterSection } from '@/components/results/FooterSection';
+import { OfferSection } from '@/components/results/OfferSection';
 
 
 function ResultContent() {
@@ -43,9 +44,10 @@ function ResultContent() {
 
   return (
     <div className="bg-cosmic-night text-white w-full overflow-x-hidden">
-      <HeroSection sign={signData} quizAnswers={quizState.answers} />
+      <HeroSection sign={signData} />
       <InsightsSection sign={quizState.answers.sign as any} />
-      <TransitionSection />
+      <RevelationSection quizAnswers={quizState.answers} />
+      <WhatYouGetSection />
       <OfferSection />
       <SocialProofSection />
       <GuaranteeSection />
