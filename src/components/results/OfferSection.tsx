@@ -1,6 +1,7 @@
 'use client';
 import Image from 'next/image';
 import placeholderImages from '@/lib/placeholder-images.json';
+import { ArrowRight, Lock, Clock, Mail } from 'lucide-react';
 
 const whatYouGetItems = placeholderImages.whatYouGet;
 
@@ -86,6 +87,34 @@ export function OfferSection() {
                </ul>
            </BonusCard>
         </div>
+        
+        <div className="text-center mt-20">
+          <a
+            href="https://pay.kiwify.com.br/FoliXIn"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block bg-success-green text-white font-bold text-xl py-5 px-10 rounded-full shadow-lg shadow-success-green/30 transition-transform transform hover:scale-105 animate-pulse-glow"
+            style={{ animationName: 'pulse-glow-green' }}
+          >
+            SIM, QUERO MEU MAPA ASTROLÓGICO!
+            <ArrowRight className="inline-block ml-2" />
+          </a>
+          <div className="mt-8 flex flex-col md:flex-row justify-center items-center gap-6 text-medium-gray">
+              <div className="flex items-center gap-2">
+                  <Lock className="w-5 h-5 text-vibrant-purple" />
+                  <span>Pagamento 100% seguro</span>
+              </div>
+              <div className="flex items-center gap-2">
+                  <Clock className="w-5 h-5 text-vibrant-purple" />
+                  <span>Acesso liberado em 1 minuto</span>
+              </div>
+              <div className="flex items-center gap-2">
+                  <Mail className="w-5 h-5 text-vibrant-purple" />
+                  <span>Dados enviados para seu e-mail</span>
+              </div>
+          </div>
+        </div>
+
       </div>
     </section>
   );

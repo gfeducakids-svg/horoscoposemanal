@@ -163,6 +163,17 @@
   }
 }
 
+@keyframes pulse-glow-green {
+    0%, 100% {
+        transform: scale(1);
+        box-shadow: 0 0 20px hsla(var(--success-green), 0.5);
+    }
+    50% {
+        transform: scale(1.05);
+        box-shadow: 0 0 40px hsla(var(--success-green), 0.8);
+    }
+}
+
 .animate-pulse-glow {
   animation: pulse-glow 3s infinite ease-in-out;
 }
