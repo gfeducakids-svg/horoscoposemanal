@@ -33,9 +33,6 @@ export default function ObrigadoPage() {
                     <h1 className="font-headline text-3xl md:text-4xl font-bold text-vibrant-purple mb-4 animate-fade-in-up">
                         ✨ Sua compra foi confirmada — e o universo acabou de te dar um sinal claro de recomeço.
                     </h1>
-                    <p className="text-lg md:text-xl text-deep-purple/80 mb-6 font-medium animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
-                        Antes de acessar suas previsões, veja como desbloquear o padrão oculto que mais trava o seu novo ciclo.
-                    </p>
                     <div className="text-left space-y-4 text-deep-purple/90 animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
                         <p>Parabéns pela sua decisão! Você acaba de garantir o <span className="font-bold">Horóscopo Semanal – Recomeços Cósmicos 2025</span> — uma das ferramentas mais poderosas para entender o ritmo do universo e agir no momento certo.</p>
                         <p>A maioria das pessoas continua perdida entre dúvidas e impulsos. Você foi diferente — escolheu clareza e alinhamento.</p>
