@@ -3,11 +3,13 @@ import Image from 'next/image';
 import { Sparkles, CheckCircle } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
+import { UrgencyTimer } from '@/components/landing/UrgencyTimer';
 
 export default function LandingPage() {
   return (
     <div className="relative min-h-screen w-full flex items-center justify-center p-4 overflow-hidden">
       <div className="relative z-10 flex flex-col items-center text-center w-full max-w-3xl mx-auto">
+        <UrgencyTimer />
         <div className="mb-8 w-full">
           <Image
             src="https://i.imgur.com/6BOMqLR.png"
