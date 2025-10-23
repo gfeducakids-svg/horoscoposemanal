@@ -5,6 +5,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion"
+import { ChatWidget } from "@/components/chat/ChatWidget";
 
 const faqs = [
     {
@@ -54,6 +55,7 @@ export function FAQSection() {
             ))}
         </Accordion>
       </div>
+      <ChatWidget />
     </section>
   );
 }

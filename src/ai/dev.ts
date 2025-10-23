@@ -3,3 +3,4 @@ config();
 
 import '@/ai/flows/analyze-decision-patterns.ts';
 import '@/ai/flows/generate-cosmic-energy-revelation.ts';
+import '@/ai/flows/chat-flow.ts';
