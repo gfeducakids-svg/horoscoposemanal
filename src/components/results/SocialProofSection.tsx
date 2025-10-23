@@ -8,9 +8,9 @@ const testimonials = placeholderImages.socialProof;
 
 export function SocialProofSection() {
   return (
-    <section className="py-20 px-4 bg-cosmic-night">
+    <section className="py-12 px-4 bg-cosmic-night">
       <div className="container mx-auto max-w-6xl">
-        <h2 className="text-center font-headline text-3xl md:text-4xl font-bold text-white mb-12">
+        <h2 className="text-center font-headline text-3xl md:text-4xl font-bold text-white mb-10">
           Dá uma olhada nessas avaliações
         </h2>
         <Carousel
@@ -47,7 +47,7 @@ export function SocialProofSection() {
           <CarouselNext className="text-white hover:text-soft-lilac bg-vibrant-purple hover:bg-vibrant-purple/80 border-soft-lilac/50 right-[-10px] md:right-[-25px]" />
         </Carousel>
 
-        <div className="mt-16 flex items-center justify-center gap-3 text-lg text-slate-300">
+        <div className="mt-12 flex items-center justify-center gap-3 text-lg text-slate-300">
             <Users className="w-6 h-6 text-soft-lilac"/>
             <p><span className="font-bold text-white">+3.847 pessoas</span> já transformaram suas vidas com o Horóscopo Semanal</p>
         </div>

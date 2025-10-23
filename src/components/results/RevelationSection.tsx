@@ -17,13 +17,13 @@ const RevelationSection = ({ quizAnswers }: RevelationSectionProps) => {
     }
 
     return (
-        <section className="py-20 px-4 text-center bg-deep-purple">
+        <section className="py-12 px-4 text-center bg-deep-purple">
             <div className="container mx-auto max-w-3xl">
-                <h1 className="font-headline text-3xl md:text-5xl font-bold text-cosmic-gold mb-8 leading-tight animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
+                <h1 className="font-headline text-3xl md:text-5xl font-bold text-cosmic-gold mb-6 leading-tight animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
                 SEU RECOMEÇO CHEGOU. <br /> E ELE SERÁ PODEROSO.
                 </h1>
                 
-                <div className="animate-fade-in-up space-y-5" style={{ animationDelay: '0.4s' }}>
+                <div className="animate-fade-in-up space-y-4" style={{ animationDelay: '0.4s' }}>
                     <p className="font-body text-base md:text-lg text-white/85 leading-relaxed">
                         Você, {getPersonalizedReference()}, não está aqui por acaso.
                     </p>
@@ -33,7 +33,7 @@ const RevelationSection = ({ quizAnswers }: RevelationSectionProps) => {
                     </p>
                 </div>
 
-                 <div className="mt-16 text-center">
+                 <div className="mt-12 text-center">
                     <p className="font-headline text-2xl md:text-3xl text-slate-300">Deixa eu te mostrar como...</p>
                 </div>
             </div>

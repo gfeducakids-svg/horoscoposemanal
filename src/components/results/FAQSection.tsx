@@ -37,9 +37,9 @@ const faqs = [
 
 export function FAQSection() {
   return (
-    <section className="py-20 px-4 bg-deep-purple">
+    <section className="py-12 px-4 bg-deep-purple">
       <div className="container mx-auto max-w-3xl">
-        <h2 className="text-center font-headline text-3xl md:text-4xl font-bold text-white mb-12">
+        <h2 className="text-center font-headline text-3xl md:text-4xl font-bold text-white mb-10">
           ❓ Você deve estar se perguntando...
         </h2>
         <Accordion type="single" collapsible className="w-full">

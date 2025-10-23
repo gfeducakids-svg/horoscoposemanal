@@ -14,9 +14,9 @@ const offerImages = [
 
 export function OfferSection() {
   return (
-    <section className="py-20 px-4 bg-light-gray text-dark-gray">
+    <section className="py-12 px-4 bg-light-gray text-dark-gray">
       <div className="container mx-auto max-w-5xl">
-        <div className="text-center mb-12">
+        <div className="text-center mb-10">
           <h2 className="font-headline text-4xl md:text-5xl font-extrabold text-vibrant-purple mb-4">
             APRESENTO: HORÓSCOPO SEMANAL – Recomeços Cósmicos 2025
           </h2>
@@ -25,7 +25,7 @@ export function OfferSection() {
           </p>
         </div>
 
-        <div className="max-w-2xl mx-auto space-y-4 mb-16">
+        <div className="max-w-2xl mx-auto space-y-4 mb-12">
             {offerImages.map((src, index) => (
                 <div key={index} className="relative w-full">
                     <Image
@@ -42,36 +42,36 @@ export function OfferSection() {
             ))}
         </div>
         
-        <div className="text-center mt-20">
-          <div className="container mx-auto max-w-2xl text-center font-headline text-dark-gray mb-8">
-              <p className="font-body text-lg text-medium-gray mb-4">Você irá ter acesso a todos esses planners personalizados para você</p>
-              <div className="py-6 px-4">
-                  <p className="text-lg">VALOR TOTAL: <span className="line-through">R$ 99,90</span></p>
+        <div className="text-center mt-12">
+          <div className="container mx-auto max-w-2xl text-center font-headline text-dark-gray mb-6">
+              <p className="font-body text-base text-medium-gray mb-4">Você irá ter acesso a todos esses planners personalizados para você</p>
+              <div className="py-4 px-4">
+                  <p className="text-md">VALOR TOTAL: <span className="line-through">R$ 99,90</span></p>
                   <p className="text-3xl md:text-4xl my-2">VOCÊ PAGA HOJE: <span className="text-vibrant-purple font-extrabold">R$ 29,90</span></p>
-                  <p className="text-lg text-success-green font-bold">ECONOMIA: R$ 70,00 (70% OFF)</p>
+                  <p className="text-md text-success-green font-bold">ECONOMIA: R$ 70,00 (70% OFF)</p>
               </div>
           </div>
           <a
             href="https://pay.kiwify.com.br/FoliXIn"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block bg-success-green text-white font-bold text-xl py-5 px-10 rounded-full shadow-lg shadow-success-green/30 transition-transform transform hover:scale-105 animate-pulse-glow"
+            className="inline-block bg-success-green text-white font-bold text-lg py-4 px-8 rounded-full shadow-lg shadow-success-green/30 transition-transform transform hover:scale-105 animate-pulse-glow"
             style={{ animationName: 'pulse-glow-green' }}
           >
             QUERO AGORA
             <ArrowRight className="inline-block ml-2" />
           </a>
-          <div className="mt-8 flex flex-col md:flex-row justify-center items-center gap-6 text-medium-gray">
+          <div className="mt-6 flex flex-col md:flex-row justify-center items-center gap-x-6 gap-y-2 text-medium-gray text-sm">
               <div className="flex items-center gap-2">
-                  <Lock className="w-5 h-5 text-vibrant-purple" />
+                  <Lock className="w-4 h-4 text-vibrant-purple" />
                   <span>Pagamento 100% seguro</span>
               </div>
               <div className="flex items-center gap-2">
-                  <Clock className="w-5 h-5 text-vibrant-purple" />
+                  <Clock className="w-4 h-4 text-vibrant-purple" />
                   <span>Acesso liberado em 1 minuto</span>
               </div>
               <div className="flex items-center gap-2">
-                  <Mail className="w-5 h-5 text-vibrant-purple" />
+                  <Mail className="w-4 h-4 text-vibrant-purple" />
                   <span>Dados enviados para seu e-mail</span>
               </div>
           </div>

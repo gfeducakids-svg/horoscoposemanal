@@ -3,11 +3,11 @@ import { ShieldCheck } from 'lucide-react';
 
 export function GuaranteeSection() {
   return (
-    <section className="py-20 px-4">
+    <section className="py-12 px-4">
       <div className="container mx-auto max-w-3xl">
         <div className="bg-deep-purple text-white rounded-2xl border-2 border-success-green p-8 text-center shadow-2xl shadow-success-green/20">
           <div className="flex justify-center mb-4">
-            <ShieldCheck className="w-24 h-24 text-success-green" />
+            <ShieldCheck className="w-20 h-20 text-success-green" />
           </div>
           <h2 className="font-headline text-3xl md:text-4xl font-bold text-white mb-4">
             GARANTIA DE 7 DIAS
@@ -20,7 +20,7 @@ export function GuaranteeSection() {
             SEM perguntas. SEM burocracia. SEM ressentimentos.
           </p>
           <div className="bg-cosmic-night/50 p-4 rounded-lg">
-             <p className="font-body text-slate-300 italic">
+             <p className="font-body text-slate-300 italic text-sm">
                 <strong>Por que essa garantia?</strong> Porque eu tenho convicção que vai te ajudar. E porque você merece testar sem risco. O risco é todo meu. A clareza é toda sua.
              </p>
           </div>
