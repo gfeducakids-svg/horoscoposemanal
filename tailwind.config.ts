@@ -57,6 +57,16 @@ const config = {
           DEFAULT: 'hsl(var(--card))',
           foreground: 'hsl(var(--card-foreground))',
         },
+        'cosmic-night': 'hsl(var(--cosmic-night))',
+        'deep-purple': 'hsl(var(--deep-purple))',
+        'vibrant-purple': 'hsl(var(--vibrant-purple))',
+        'soft-lilac': 'hsl(var(--soft-lilac))',
+        'cosmic-gold': 'hsl(var(--cosmic-gold))',
+        'success-green': 'hsl(var(--success-green))',
+        'urgency-red': 'hsl(var(--urgency-red))',
+        'light-gray': '#F8F9FA',
+        'medium-gray': '#6C757D',
+        'dark-gray': '#212529',
       },
       borderRadius: {
         lg: 'var(--radius)',
@@ -77,9 +87,36 @@ const config = {
         'accordion-down': 'accordion-down 0.2s ease-out',
         'accordion-up': 'accordion-up 0.2s ease-out',
       },
+      transformStyle: {
+        '3d': 'preserve-3d',
+      },
+      perspective: {
+        '1000': '1000px',
+      },
+      backfaceVisibility: {
+        'hidden': 'hidden',
+      },
     },
   },
-  plugins: [require('tailwindcss-animate')],
+  plugins: [
+    require('tailwindcss-animate'),
+    function({ addUtilities }: { addUtilities: any }) {
+      addUtilities({
+        '.transform-style-3d': {
+          'transform-style': 'preserve-3d',
+        },
+        '.perspective-1000': {
+          'perspective': '1000px',
+        },
+        '.backface-hidden': {
+          'backface-visibility': 'hidden',
+        },
+        '.rotate-y-180': {
+          'transform': 'rotateY(180deg)',
+        },
+      })
+    }
+  ],
 } satisfies Config;
 
 export default config;

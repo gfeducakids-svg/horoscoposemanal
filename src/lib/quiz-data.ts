@@ -12,7 +12,13 @@ export type Sign =
   | 'aquarius'
   | 'pisces';
 
-export const zodiacSigns: { id: Sign; name: string; symbol: string }[] = [
+export interface ZodiacSign {
+  id: Sign;
+  name: string;
+  symbol: string;
+}
+
+export const zodiacSigns: ZodiacSign[] = [
   { id: 'aries', name: 'Áries', symbol: '♈' },
   { id: 'taurus', name: 'Touro', symbol: '♉' },
   { id: 'gemini', name: 'Gêmeos', symbol: '♊' },
