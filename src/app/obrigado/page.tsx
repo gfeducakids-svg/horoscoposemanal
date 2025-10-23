@@ -121,8 +121,8 @@ export default function ObrigadoPage() {
                      <p className="font-bold text-urgency-red mb-8">Mas atenção: essa página aparece apenas uma vez. Quando sair dela, a oferta expira e os bônus desaparecem.</p>
 
                     <a href="https://pay.kiwify.com.br/9Y9PJSZ" target="_blank" rel="noopener noreferrer">
-                        <Button className="w-full h-auto text-xl font-bold py-4 px-8 rounded-lg bg-cta-green text-white hover:bg-cta-green/90 animate-pulse-glow" style={{ animationName: 'pulse-glow-green' }}>
-                            EU QUERO
+                        <Button className="w-full h-auto text-lg font-bold py-4 px-6 rounded-lg bg-cta-green text-white hover:bg-cta-green/90 animate-pulse-glow" style={{ animationName: 'pulse-glow-green' }}>
+                            Não vou perder essa oportunidade
                         </Button>
                     </a>
                     <Button variant="link" className="text-urgency-red hover:text-urgency-red/80 mt-4">
