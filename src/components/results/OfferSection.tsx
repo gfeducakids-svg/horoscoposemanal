@@ -33,14 +33,9 @@ export function OfferSection() {
         </div>
 
         <div className="mb-16">
-          <h3 className="text-center font-headline text-3xl md:text-4xl font-bold text-deep-purple mb-12">
-              📦 O que você vai receber:
-          </h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {whatYouGetItems.map((item, index) => (
-                <div key={index} className="p-1">
-                  <div className="bg-white p-6 rounded-2xl border border-vibrant-purple/10 shadow-lg h-full flex flex-col">
-                    <div className="relative w-full h-48 mb-4">
+            <div className="grid grid-cols-3 md:grid-cols-5 gap-2">
+                {whatYouGetItems.map((item, index) => (
+                    <div key={index} className="relative aspect-square w-full">
                         <Image
                             src={item.image}
                             alt={item.title}
@@ -49,15 +44,8 @@ export function OfferSection() {
                             data-ai-hint={item.imageHint}
                         />
                     </div>
-                    <h3 className="font-headline text-xl text-vibrant-purple font-bold mb-2">{item.title}</h3>
-                    <p className="font-body text-medium-gray text-sm flex-grow">{item.description}</p>
-                    <span className="mt-4 inline-block bg-cosmic-gold/20 text-cosmic-gold text-xs font-bold px-3 py-1 rounded-full self-start">
-                        {item.badge}
-                    </span>
-                  </div>
-                </div>
-              ))}
-          </div>
+                ))}
+            </div>
         </div>
         
         <div className="grid md:grid-cols-2 gap-8">
