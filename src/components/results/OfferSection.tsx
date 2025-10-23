@@ -30,12 +30,6 @@ export function OfferSection() {
           <h2 className="font-headline text-4xl md:text-5xl font-extrabold text-vibrant-purple mb-4">
             APRESENTO:
           </h2>
-          <p className="font-headline text-2xl md:text-3xl font-bold text-deep-purple mb-4">
-            HORÓSCOPO SEMANAL – RECOMEÇOS CÓSMICOS 2025
-          </p>
-          <p className="font-body text-lg text-medium-gray max-w-3xl mx-auto">
-            A Única Ferramenta de Orientação Astrológica que Revela <span className="font-bold text-vibrant-purple">QUANDO Agir e QUANDO Esperar</span> para você tomar decisões no momento certo do cosmos.
-          </p>
         </div>
 
         <div className="mb-16">
