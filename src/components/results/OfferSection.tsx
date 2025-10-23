@@ -18,8 +18,11 @@ export function OfferSection() {
       <div className="container mx-auto max-w-5xl">
         <div className="text-center mb-12">
           <h2 className="font-headline text-4xl md:text-5xl font-extrabold text-vibrant-purple mb-4">
-            APRESENTO:
+            APRESENTO: HORÓSCOPO SEMANAL – Recomeços Cósmicos 2025
           </h2>
+          <p className="font-body text-lg text-medium-gray max-w-3xl mx-auto">
+            Ferramenta de orientação astrológica instantânea que revela o que os astros reservam para cada signo diante das grandes transformações previstas para o futuro.
+          </p>
         </div>
 
         <div className="max-w-2xl mx-auto space-y-4 mb-16">
