@@ -81,7 +81,7 @@ export default function ObrigadoPage() {
                     <div className="space-y-4 text-deep-purple/80 mb-12">
                         <p>Ele é um <span className="font-bold">guia rápido + template digital</span> que mostra, em 10 minutos, qual energia está bloqueando seu recomeço e como realinhá-la usando o mesmo Sistema Celeste de Sincronicidade.</p>
                         <p>Em vez de tentar interpretar o céu sozinha, você só preenche o mapa e vê o padrão se revelar.</p>
-                        <p className="font-bold">É literalmente o que separa quem lê o horóscopo e não aplica de quem usa o horóscopo para transformar a própria vida.</p>
+                        <p className="font-bold">É literally o que separa quem lê o horóscopo e não aplica de quem usa o horóscopo para transformar a própria vida.</p>
                     </div>
 
                     <Card className="bg-white/70 border-vibrant-purple/30 shadow-2xl shadow-vibrant-purple/20 p-6 md:p-8">
@@ -122,12 +122,6 @@ export default function ObrigadoPage() {
                      </div>
                      <p className="text-deep-purple/80 mb-6">Se dentro de 7 dias você sentir que o mapa não trouxe clareza, devolvo 100% do seu dinheiro. Sem perguntas, sem burocracia. Todo risco é meu.</p>
                      <p className="font-bold text-urgency-red mb-8">Mas atenção: essa página aparece apenas uma vez. Quando sair dela, a oferta expira e os bônus desaparecem.</p>
-
-                    <div className="bg-white/50 border border-vibrant-purple/20 rounded-lg p-6 space-y-4 mb-8">
-                        <h4 className="font-headline text-xl font-bold">Suas Opções:</h4>
-                        <p className="text-cta-green flex items-start gap-2 text-left"><span className="font-bold text-lg">🟢 OPÇÃO 1:</span> Garantir o Mapa da Clareza Cósmica agora e desbloquear o seu recomeço em minutos.</p>
-                        <p className="text-urgency-red flex items-start gap-2 text-left"><span className="font-bold text-lg">🔴 OPÇÃO 2:</span> Ignorar e continuar tentando interpretar os sinais sozinha — arriscando repetir os mesmos ciclos de 2024.</p>
-                    </div>
 
                     <p className="font-headline text-xl text-vibrant-purple mb-6">Eu sei qual caminho o universo está te mostrando. <br/> Clique abaixo e siga esse sinal.</p>
 
