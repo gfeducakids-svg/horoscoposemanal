@@ -13,7 +13,6 @@ import { HeroSection } from '@/components/results/HeroSection';
 import { InsightsSection } from '@/components/results/InsightsSection';
 import { TransitionSection } from '@/components/results/TransitionSection';
 import { OfferSection } from '@/components/results/OfferSection';
-import { WhatYouGetSection } from '@/components/results/WhatYouGetSection';
 import { ValueSection } from '@/components/results/ValueSection';
 import { SocialProofSection } from '@/components/results/SocialProofSection';
 import { FinalCTASection } from '@/components/results/FinalCTASection';
@@ -108,7 +107,6 @@ function ResultContent() {
       <HeroSection sign={signData} quizAnswers={quizState.answers} />
       <InsightsSection analysis={result.analysis} />
       <TransitionSection />
-      <WhatYouGetSection />
       <OfferSection />
       <ValueSection />
       <SocialProofSection />

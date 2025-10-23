@@ -1,10 +1,73 @@
 {
-  "placeholderImages": [
+  "whatYouGet": [
     {
-      "id": "cosmic-background",
-      "description": "A dark, starry sky representing the cosmos.",
-      "imageUrl": "https://images.unsplash.com/photo-1534796636912-3b95b3ab5986?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxzdGFycnklMjBza3l8ZW58MHx8fHwxNzYxMTE0NzMwfDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "starry sky"
+      "title": "LEITURA ENERGÉTICA SEMANAL",
+      "image": "https://picsum.photos/seed/1/600/400",
+      "imageHint": "weekly energy reading",
+      "description": "Análise completa da energia da semana pro seu signo para amor, trabalho e decisões.",
+      "badge": "Toda semana, sem falhar"
+    },
+    {
+      "title": "ALERTAS DE TRÂNSITOS CRÍTICOS",
+      "image": "https://picsum.photos/seed/2/600/400",
+      "imageHint": "critical transit alerts",
+      "description": "Notificações de Mercúrio retrógrado, eclipses e dias para EVITAR decisões impulsivas.",
+      "badge": "Nunca mais seja pego de surpresa"
+    },
+    {
+      "title": "MAPEAMENTO DOS PORTAIS DE RECOMEÇO",
+      "image": "https://picsum.photos/seed/3/600/400",
+      "imageHint": "fresh start portals mapping",
+      "description": "Identifica os 3-5 períodos de virada do ano e como se preparar energeticamente.",
+      "badge": "Só abrem 1x por ano"
+    },
+    {
+      "title": "GUIAS RÁPIDOS DE RITUAIS SEMANAIS",
+      "image": "https://picsum.photos/seed/4/600/400",
+      "imageHint": "weekly rituals guides",
+      "description": "Rituais de 5-10 minutos, meditações e afirmações alinhados ao céu da semana.",
+      "badge": "Simples e poderoso"
+    },
+    {
+      "title": "MAPA VISUAL DOS TRÂNSITOS",
+      "image": "https://picsum.photos/seed/5/600/400",
+      "imageHint": "visual transits map",
+      "description": "Gráficos fáceis de entender com a linha do tempo dos movimentos planetários.",
+      "badge": "Entenda visualmente"
+    }
+  ],
+  "socialProof": [
+    {
+      "name": "Juliana Santos",
+      "age": 34,
+      "sign": "Câncer",
+      "text": "Eu sou canceriana e vivia repetindo os mesmos erros nos relacionamentos. Quando comecei a seguir as previsões semanais, tudo mudou. Eu SABIA quando me abrir e quando me proteger. Hoje tô num relacionamento incrível e com paz interior.",
+      "image": "https://picsum.photos/seed/t1/100/100",
+      "imageHint": "happy woman"
+    },
+    {
+      "name": "Camila Rodrigues",
+      "age": 29,
+      "sign": "Áries",
+      "text": "Como ariana, eu sempre agi por impulso e me ferrava. O Sistema Celeste me ensinou a pausar no momento certo. Consegui mudar de carreira sem cometer os erros que ia cometer. Valeu cada centavo.",
+      "image": "https://picsum.photos/seed/t2/100/100",
+      "imageHint": "confident woman"
+    },
+    {
+      "name": "Mariana Costa",
+      "age": 31,
+      "sign": "Escorpião",
+      "text": "Sou escorpiana e tinha dificuldade de soltar o passado. As previsões me mostraram QUANDO fazer isso. No portal de março, eu consegui. Hoje sou outra pessoa.",
+      "image": "https://picsum.photos/seed/t3/100/100",
+      "imageHint": "serene woman"
+    },
+    {
+      "name": "Patricia Alves",
+      "age": 36,
+      "sign": "Libra",
+      "text": "Libriana indecisa aqui! Nunca conseguia tomar decisões sem pedir opinião de todo mundo. Agora eu consulto os astros e confio. Mudou minha relação comigo mesma.",
+      "image": "https://picsum.photos/seed/t4/100/100",
+      "imageHint": "smiling person"
     }
   ]
 }
