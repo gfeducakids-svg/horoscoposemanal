@@ -12,11 +12,12 @@ import { TransitionSection } from '@/components/results/TransitionSection';
 import { OfferSection } from '@/components/results/OfferSection';
 import { ValueSection } from '@/components/results/ValueSection';
 import { SocialProofSection } from '@/components/results/SocialProofSection';
-import { FinalCTASection } from '@/components/results/FinalCTASection';
 import { GuaranteeSection } from '@/components/results/GuaranteeSection';
 import { FAQSection } from '@/components/results/FAQSection';
 import { FooterSection } from '@/components/results/FooterSection';
 import { BenefitsSection } from '@/components/results/BenefitsSection';
+import { Button } from '@/components/ui/button';
+import { ArrowRight, Sparkles } from 'lucide-react';
 
 function ResultContent() {
   const router = useRouter();
@@ -103,7 +104,25 @@ function ResultContent() {
       <BenefitsSection />
       <SocialProofSection />
       <GuaranteeSection />
-      <FinalCTASection />
+        <section className="py-20 bg-deep-purple text-white">
+            <div className="container mx-auto max-w-3xl text-center">
+                <p className="font-body text-lg text-soft-lilac mb-2">OFERTA ESPECIAL POR TEMPO LIMITADO</p>
+                <h2 className="font-headline text-3xl md:text-5xl font-extrabold text-white mb-4">
+                    Sincronize sua vida com o cosmos por menos de R$1 por dia
+                </h2>
+                <p className="font-body text-lg text-slate-300 max-w-2xl mx-auto mb-8">
+                    Receba clareza semanal, aproveite os portais de recomeço e tome decisões com a confiança que só os astros podem dar. Seu futuro está escrito nas estrelas. Você só precisa do mapa.
+                </p>
+
+                <div className="flex justify-center mb-8">
+                    <Button size="lg" className="bg-cosmic-gold text-deep-purple hover:bg-cosmic-gold/90 font-bold text-xl py-8 px-10 rounded-full shadow-lg shadow-cosmic-gold/30 transition-transform transform hover:scale-105">
+                        <Sparkles className="mr-3 h-7 w-7" />
+                        SIM, QUERO MEU MAPA SEMANAL!
+                        <ArrowRight className="ml-3 h-7 w-7" />
+                    </Button>
+                </div>
+            </div>
+        </section>
       <FAQSection />
       <FooterSection />
     </div>
