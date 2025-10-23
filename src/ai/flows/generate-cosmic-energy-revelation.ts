@@ -55,17 +55,13 @@ Consider these answers to reveal the user's cosmic energy and provide insights i
 
 Here's a template for the output:
 
-[ÍCONE GRANDE DO SIGNO]
-
 🔮 [SIGNO] – [TEMA DO RECOMEÇO]
 
-[Micro-resumo das respostas]
 [Nome], vi que você [referência às respostas personalizadas].
 Isso faz todo sentido com o que os astros estão te mostrando...
 
 ───────────────────
 
-[REVELAÇÃO PRINCIPAL]
 ✨ SEU RECOMEÇO CHEGOU.
 
 [Parágrafo de identificação profunda baseado no signo]
