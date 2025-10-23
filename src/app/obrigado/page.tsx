@@ -122,9 +122,11 @@ export default function ObrigadoPage() {
 
                     <p className="font-headline text-xl text-vibrant-purple mb-6">Eu sei qual caminho o universo está te mostrando. <br/> Clique abaixo e siga esse sinal.</p>
 
-                    <Button className="w-full h-auto text-2xl font-bold py-6 px-8 rounded-lg bg-cta-green text-white hover:bg-cta-green/90 animate-pulse-glow" style={{ animationName: 'pulse-glow-green' }}>
-                         EU QUERO
-                    </Button>
+                    <a href="https://pay.kiwify.com.br/9Y9PJSZ" target="_blank" rel="noopener noreferrer">
+                        <Button className="w-full h-auto text-xl font-bold py-4 px-8 rounded-lg bg-cta-green text-white hover:bg-cta-green/90 animate-pulse-glow" style={{ animationName: 'pulse-glow-green' }}>
+                            EU QUERO
+                        </Button>
+                    </a>
                     <Button variant="link" className="text-urgency-red hover:text-urgency-red/80 mt-4">
                         Não, obrigado, quero apenas o meu produto
                     </Button>
@@ -133,3 +135,5 @@ export default function ObrigadoPage() {
         </div>
     );
 }
+
+    
