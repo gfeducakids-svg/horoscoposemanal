@@ -38,7 +38,7 @@ export const UrgencyTimer = () => {
         <div className="flex items-center justify-center gap-2">
           <TimerIcon className="h-5 w-5 text-red-400" />
           <p className="font-headline text-sm sm:text-base">
-            O PORTAL SE FECHA EM:
+            O PORTAL CÓSMICO SE FECHA EM:
           </p>
         </div>
         <div className="font-bold text-xl sm:text-2xl tracking-widest mt-1">
