@@ -44,7 +44,8 @@ export function OfferSection() {
         
         <div className="text-center mt-20">
           <div className="container mx-auto max-w-2xl text-center font-headline text-dark-gray mb-8">
-              <div className="border-y-2 border-dashed border-vibrant-purple py-6 px-4">
+              <p className="font-body text-lg text-medium-gray mb-4">Você irá ter acesso a todos esses planners personalizados para você</p>
+              <div className="py-6 px-4">
                   <p className="text-lg">VALOR TOTAL: <span className="line-through">R$ 99,90</span></p>
                   <p className="text-3xl md:text-4xl my-2">VOCÊ PAGA HOJE: <span className="text-vibrant-purple font-extrabold">R$ 29,90</span></p>
                   <p className="text-lg text-success-green font-bold">ECONOMIA: R$ 70,00 (70% OFF)</p>
