@@ -54,7 +54,7 @@ export function OfferSection() {
             className="inline-block bg-success-green text-white font-bold text-xl py-5 px-10 rounded-full shadow-lg shadow-success-green/30 transition-transform transform hover:scale-105 animate-pulse-glow"
             style={{ animationName: 'pulse-glow-green' }}
           >
-            SIM, QUERO MEU MAPA ASTROLÓGICO!
+            QUERO AGORA
             <ArrowRight className="inline-block ml-2" />
           </a>
           <div className="mt-8 flex flex-col md:flex-row justify-center items-center gap-6 text-medium-gray">
