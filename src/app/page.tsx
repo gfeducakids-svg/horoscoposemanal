@@ -19,21 +19,21 @@ export default function LandingPage() {
           />
         </div>
 
-        <Card className="p-4 sm:p-6 bg-primary/50 border-border/20 backdrop-blur-sm w-full max-w-md mb-8">
-          <ul className="space-y-3 text-slate-300 font-body text-base sm:text-lg">
-            <li className="flex items-start sm:items-center gap-3">
-              <CheckCircle className="h-5 w-5 text-accent flex-shrink-0 mt-1 sm:mt-0" />
-              <span>A descoberta astrológica que muda tudo sobre relacionamentos e propósito</span>
-            </li>
-            <li className="flex items-start sm:items-center gap-3">
-              <CheckCircle className="h-5 w-5 text-accent flex-shrink-0 mt-1 sm:mt-0" />
-              <span>O segredo dos signos que prosperam em grandes transições astrológicas</span>
-            </li>
-            <li className="flex items-start sm:items-center gap-3">
-              <CheckCircle className="h-5 w-5 text-accent flex-shrink-0 mt-1 sm:mt-0" />
+        <Card className="p-4 sm:p-6 bg-primary/50 border-border/20 backdrop-blur-sm w-full mb-8">
+          <div className="flex flex-col sm:flex-row justify-around items-start gap-4 text-slate-300 font-body text-center text-sm">
+            <div className="flex items-center gap-2">
+              <CheckCircle className="h-5 w-5 text-accent flex-shrink-0" />
+              <span>A descoberta astrológica que muda tudo</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <CheckCircle className="h-5 w-5 text-accent flex-shrink-0" />
+              <span>O segredo dos signos que prosperam</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <CheckCircle className="h-5 w-5 text-accent flex-shrink-0" />
               <span>Apenas 1 minuto para clareza total</span>
-            </li>
-          </ul>
+            </div>
+          </div>
         </Card>
 
         <Link href="/quiz">
