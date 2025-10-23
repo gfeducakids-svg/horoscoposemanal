@@ -33,8 +33,8 @@ const QuizContent = () => {
   };
 
   return (
-    <div className="relative flex flex-col items-center justify-center min-h-screen w-full p-4 overflow-hidden">
-        <div className="absolute top-0 left-0 right-0 p-4 z-20">
+    <div className="flex flex-col items-center justify-start min-h-screen w-full p-4 overflow-hidden pt-20">
+        <div className="absolute top-6 left-0 right-0 p-4 z-20">
             <StepIndicator />
         </div>
         <AnimatePresence mode="wait">
