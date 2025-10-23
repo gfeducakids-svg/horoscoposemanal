@@ -7,14 +7,14 @@ import { Card } from '@/components/ui/card';
 export default function LandingPage() {
   return (
     <div className="relative min-h-screen w-full flex items-center justify-center p-4 overflow-hidden">
-      <div className="relative z-10 flex flex-col items-center text-center max-w-2xl mx-auto">
-        <div className="mb-8">
+      <div className="relative z-10 flex flex-col items-center text-center max-w-3xl mx-auto">
+        <div className="mb-8 w-full max-w-md sm:max-w-lg md:max-w-xl">
           <Image
             src="https://i.imgur.com/6BOMqLR.png"
             alt="Energia Cósmica"
-            width={400}
-            height={400}
-            className="rounded-lg border-2 border-accent/50 shadow-lg shadow-accent/20"
+            width={800}
+            height={800}
+            className="rounded-lg border-2 border-accent/50 shadow-lg shadow-accent/20 w-full h-auto"
             priority
           />
         </div>
