@@ -17,10 +17,10 @@ export function OfferSection() {
     <section className="py-12 px-4 bg-light-gray text-dark-gray">
       <div className="container mx-auto max-w-5xl">
         <div className="text-center mb-10">
-          <h2 className="font-headline text-4xl md:text-5xl font-extrabold text-vibrant-purple mb-4">
+          <h2 className="font-headline text-3xl md:text-5xl font-extrabold text-vibrant-purple mb-4">
             APRESENTO: HORÓSCOPO SEMANAL – Recomeços Cósmicos 2025
           </h2>
-          <p className="font-body text-lg text-medium-gray max-w-3xl mx-auto">
+          <p className="font-body text-base md:text-lg text-medium-gray max-w-3xl mx-auto">
             Ferramenta de orientação astrológica instantânea que revela o que os astros reservam para cada signo diante das grandes transformações previstas para o futuro.
           </p>
         </div>

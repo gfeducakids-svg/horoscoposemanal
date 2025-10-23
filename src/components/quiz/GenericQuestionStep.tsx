@@ -57,7 +57,7 @@ export function GenericQuestionStep({ step }: GenericQuestionStepProps) {
             variant="outline"
             size="lg"
             onClick={() => handleAnswer(option)}
-            className="text-lg justify-start p-6 h-auto bg-primary/50 border-border/30 hover:bg-accent/20 hover:text-white hover:border-accent text-slate-200"
+            className="text-base md:text-lg justify-start p-6 h-auto bg-primary/50 border-border/30 hover:bg-accent/20 hover:text-white hover:border-accent text-slate-200"
           >
             {option}
           </Button>
