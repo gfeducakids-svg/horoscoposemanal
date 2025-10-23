@@ -22,7 +22,7 @@ export default function LandingPage() {
         </div>
 
         <Card className="p-4 sm:p-6 bg-primary/50 border-border/20 backdrop-blur-sm w-full mb-8">
-          <div className="flex flex-col md:flex-row justify-around items-start md:items-center gap-4 text-slate-200 font-body text-center text-sm">
+          <div className="flex flex-col md:flex-row justify-around items-start md:items-center gap-4 text-white font-body text-center text-sm">
             <div className="flex items-center gap-2">
               <CheckCircle className="h-5 w-5 text-accent flex-shrink-0" />
               <span>A descoberta astrológica que muda tudo</span>
@@ -39,7 +39,7 @@ export default function LandingPage() {
         </Card>
 
         <Link href="/quiz">
-          <Button size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90 font-bold text-lg py-8 px-10 rounded-full shadow-lg shadow-accent/20 transition-transform transform hover:scale-105">
+          <Button size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90 font-bold text-lg py-6 px-8 rounded-full shadow-lg shadow-accent/20 transition-transform transform hover:scale-105">
             <Sparkles className="mr-2 h-6 w-6" />
             COMEÇAR GRATUITAMENTE
             <Sparkles className="ml-2 h-6 w-6" />
