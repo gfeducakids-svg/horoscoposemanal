@@ -7,7 +7,6 @@ import { zodiacSigns } from '@/lib/quiz-data';
 import { HeroSection } from '@/components/results/HeroSection';
 import { InsightsSection } from '@/components/results/InsightsSection';
 import { RevelationSection } from '@/components/results/RevelationSection';
-import { WhatYouGetSection } from '@/components/results/WhatYouGetSection';
 import { SocialProofSection } from '@/components/results/SocialProofSection';
 import { GuaranteeSection } from '@/components/results/GuaranteeSection';
 import { FAQSection } from '@/components/results/FAQSection';
@@ -47,7 +46,6 @@ function ResultContent() {
       <HeroSection sign={signData} />
       <InsightsSection sign={quizState.answers.sign as any} />
       <RevelationSection quizAnswers={quizState.answers} />
-      <WhatYouGetSection />
       <OfferSection />
       <SocialProofSection />
       <GuaranteeSection />
