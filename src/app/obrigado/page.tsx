@@ -86,7 +86,7 @@ export default function ObrigadoPage() {
                             <h3 className="font-headline text-xl md:text-2xl font-bold text-vibrant-purple mb-6">
                                 Quanto vale eliminar a confusão e manifestar seus recomeços em 1/3 do tempo?
                             </h3>
-                             <p className="text-deep-purple/80 mb-4">Normalmente, este diagnóstico é vendido por <span className="line-through">R$249</span> em consultas individuais. Mas como você acabou de se tornar aluna do Recomeços Cósmicos 2025, poderá acessar tudo por apenas <span className="font-bold">R$39,90</span> — pagamento único e acesso vitalício.</p>
+                             <p className="text-deep-purple/80 mb-4">Normalmente, este diagnóstico é vendido por <span className="line-through">R$249</span> em consultas individuais. Mas como você acabou de se tornar aluna do Recomeços Cósmicos 2025, poderá acessar tudo por apenas <span className="font-bold">R$19,90</span> — pagamento único e acesso vitalício.</p>
 
                             <div className="bg-vibrant-purple/10 rounded-lg p-6 my-6 text-left">
                                 <h4 className="font-headline font-bold text-lg mb-4 text-dark-gray">Você vai receber:</h4>
@@ -102,8 +102,8 @@ export default function ObrigadoPage() {
 
                             <div className="font-headline text-vibrant-purple mb-8">
                                 <p className="text-xl">Investimento Hoje:</p>
-                                <p className="text-5xl font-extrabold">R$39,90</p>
-                                <p className="text-lg text-cta-green font-bold">(78% OFF)</p>
+                                <p className="text-5xl font-extrabold">R$19,90</p>
+                                <p className="text-lg text-cta-green font-bold">(92% OFF)</p>
                             </div>
                              <p className="text-sm text-deep-purple/70">Menos que um almoço ou uma netflix — e o retorno é clareza por um ano inteiro.</p>
 
