@@ -20,7 +20,7 @@ export default function LandingPage() {
         </div>
 
         <Card className="p-4 sm:p-6 bg-primary/50 border-border/20 backdrop-blur-sm w-full mb-8">
-          <div className="flex flex-col sm:flex-row justify-around items-start gap-4 text-slate-300 font-body text-center text-sm">
+          <div className="flex justify-around items-center gap-4 text-slate-300 font-body text-center text-sm">
             <div className="flex items-center gap-2">
               <CheckCircle className="h-5 w-5 text-accent flex-shrink-0" />
               <span>A descoberta astrológica que muda tudo</span>
