@@ -8,7 +8,7 @@ export default function LandingPage() {
   return (
     <div className="relative min-h-screen w-full flex items-center justify-center p-4 overflow-hidden">
       <div className="relative z-10 flex flex-col items-center text-center max-w-3xl mx-auto">
-        <div className="mb-8 w-full max-w-md sm:max-w-lg md:max-w-xl">
+        <div className="mb-8 w-full">
           <Image
             src="https://i.imgur.com/6BOMqLR.png"
             alt="Energia Cósmica"
@@ -43,6 +43,11 @@ export default function LandingPage() {
             <Sparkles className="ml-2 h-6 w-6" />
           </Button>
         </Link>
+        <p className="text-white mt-6 max-w-xl text-center font-body">
+          O Portal cósmico só se abre a cada 84 anos e no ano de 2025 ele fará milhares de pessoas melhorarem suas carreiras profissionais e amorosas.
+          <br/>
+          <span className="font-bold text-accent">Não perca essa Oportunidade Única</span>
+        </p>
       </div>
     </div>
   );
