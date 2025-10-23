@@ -28,6 +28,7 @@ export function SocialProofSection() {
                       controls 
                       className="w-full h-full object-cover aspect-[9/16]"
                       poster={item.thumbnailUrl}
+                      preload="metadata"
                     >
                       <source src={item.videoUrl} type="video/mp4" />
                       Your browser does not support the video tag.
