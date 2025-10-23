@@ -2,11 +2,8 @@
 
 import { Suspense, useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
-import { generateCosmicEnergyRevelation } from '@/ai/flows/generate-cosmic-energy-revelation';
-import type { GenerateCosmicEnergyRevelationOutput } from '@/ai/flows/generate-cosmic-energy-revelation';
 import { analyzeDecisionPatterns } from '@/ai/flows/analyze-decision-patterns';
 import type { AnalyzeDecisionPatternsOutput } from '@/ai/flows/analyze-decision-patterns';
-import { Loader } from 'lucide-react';
 import { QuizState } from '@/context/QuizContext';
 import { zodiacSigns } from '@/lib/quiz-data';
 import { HeroSection } from '@/components/results/HeroSection';
@@ -21,15 +18,10 @@ import { FAQSection } from '@/components/results/FAQSection';
 import { FooterSection } from '@/components/results/FooterSection';
 import { BenefitsSection } from '@/components/results/BenefitsSection';
 
-interface AIResult {
-  revelation: GenerateCosmicEnergyRevelationOutput | null;
-  analysis: AnalyzeDecisionPatternsOutput | null;
-}
-
 function ResultContent() {
   const router = useRouter();
-  const [loading, setLoading] = useState(true);
-  const [result, setResult] = useState<AIResult>({ revelation: null, analysis: null });
+  const [analysis, setAnalysis] = useState<AnalyzeDecisionPatternsOutput | null>(null);
+  const [isAnalysisLoading, setAnalysisLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [quizState, setQuizState] = useState<QuizState | null>(null);
 
@@ -37,7 +29,6 @@ function ResultContent() {
     const stateFromStorage = localStorage.getItem('cosmic-quiz-state');
     if (!stateFromStorage) {
       setError('Nenhum dado do quiz encontrado. Por favor, comece novamente.');
-      setLoading(false);
       setTimeout(() => router.push('/'), 3000);
       return;
     }
@@ -47,37 +38,37 @@ function ResultContent() {
 
     const runAI = async () => {
       try {
-        const [revelationResult, analysisResult] = await Promise.all([
-          generateCosmicEnergyRevelation({
-            sign: parsedState.answers.sign || '',
-            question1Answer: parsedState.answers.signQuestion1 || '',
-            question2Answer: parsedState.answers.signQuestion2 || '',
-            lifeArea: parsedState.answers.areaOfLife || '',
-            decisionPattern: parsedState.answers.decisionPattern || '',
-            currentFeeling: parsedState.answers.currentSensation || '',
-            mentalOverload: parsedState.answers.overloadMental || '',
-            relationshipChallenge: parsedState.answers.relationshipChallenge || '',
-            deepestDesire: parsedState.answers.deepestDesire || '',
-            commitmentLevel: parsedState.answers.commitment || '',
-          }),
-          analyzeDecisionPatterns({
-            sign: parsedState.answers.sign || '',
-            signQuestion1: parsedState.answers.signQuestion1 || '',
-            signQuestion2: parsedState.answers.signQuestion2 || '',
-            areaOfLife: parsedState.answers.areaOfLife || '',
-            decisionPattern: parsedState.answers.decisionPattern || '',
-            currentSensation: parsedState.answers.currentSensation || '',
-            overloadMental: parsedState.answers.overloadMental || '',
-            relationshipChallenge: parsedState.answers.relationshipChallenge || '',
-            deepestDesire: parsedState.answers.deepestDesire || '',
-          }),
-        ]);
-        setResult({ revelation: revelationResult, analysis: analysisResult });
+        setAnalysisLoading(true);
+        const analysisResult = await analyzeDecisionPatterns({
+          sign: parsedState.answers.sign || '',
+          signQuestion1: parsedState.answers.signQuestion1 || '',
+          signQuestion2: parsedState.answers.signQuestion2 || '',
+          areaOfLife: parsedState.answers.areaOfLife || '',
+          decisionPattern: parsedState.answers.decisionPattern || '',
+          currentSensation: parsedState.answers.currentSensation || '',
+          overloadMental: parsedState.answers.overloadMental || '',
+          relationshipChallenge: parsedState.answers.relationshipChallenge || '',
+          deepestDesire: parsedState.answers.deepestDesire || '',
+        });
+        setAnalysis(analysisResult);
       } catch (e) {
         console.error(e);
-        setError('Ocorreu um erro ao gerar sua revelação. Tente novamente.');
+        // Set a fallback analysis so the page still renders something
+        setAnalysis({
+          assessment: 'Análise cósmica padrão.',
+          insights: [
+            "Um trânsito importante está ativando sua área de carreira, trazendo novas oportunidades, mas cuidado com a impulsividade.",
+            "Sua energia emocional estará em alta nas próximas semanas, sendo um momento perfeito para resolver pendências afetivas.",
+            "Uma janela de oportunidade para manifestação se abre em breve, convidando a focar em seus desejos mais profundos."
+          ],
+          recommendations: [
+            "Os próximos 30 dias serão decisivos para sua transformação profissional.",
+            "É o momento perfeito para ter aquela conversa difícil, mas evite decisões impulsivas nos próximos dias.",
+            "Quem aproveita essa energia consegue avanços significativos. Quem ignora, pode sentir estagnação."
+          ]
+        });
       } finally {
-        setLoading(false);
+        setAnalysisLoading(false);
       }
     };
 
@@ -86,19 +77,18 @@ function ResultContent() {
 
   const signData = zodiacSigns.find(s => s.id === quizState?.answers.sign);
 
-  if (loading) {
+  if (error) {
     return (
       <div className="flex flex-col items-center justify-center text-center text-white min-h-screen">
-        <Loader className="h-12 w-12 animate-spin text-accent mb-4" />
-        <p className="font-headline text-2xl">Gerando sua revelação cósmica...</p>
+        <p className="font-headline text-2xl text-red-400">{error}</p>
       </div>
     );
   }
 
-  if (error || !quizState || !signData) {
-    return (
+  if (!quizState || !signData) {
+     return (
       <div className="flex flex-col items-center justify-center text-center text-white min-h-screen">
-        <p className="font-headline text-2xl text-red-400">{error || 'Não foi possível carregar os dados.'}</p>
+        <p className="font-headline text-2xl">Carregando seus dados...</p>
       </div>
     );
   }
@@ -106,7 +96,7 @@ function ResultContent() {
   return (
     <div className="bg-cosmic-night text-white w-full overflow-x-hidden">
       <HeroSection sign={signData} quizAnswers={quizState.answers} />
-      <InsightsSection analysis={result.analysis} />
+      <InsightsSection analysis={analysis} isLoading={isAnalysisLoading} />
       <TransitionSection />
       <OfferSection />
       <ValueSection />
