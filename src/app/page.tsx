@@ -23,15 +23,15 @@ export default function LandingPage() {
           <ul className="space-y-2 text-slate-300 font-body text-lg">
             <li className="flex items-center gap-2">
               <CheckCircle className="h-5 w-5 text-accent" />
-              Leitura personalizada do seu signo
+              A descoberta astrológica que muda tudo sobre relacionamentos e propósito
             </li>
             <li className="flex items-center gap-2">
               <CheckCircle className="h-5 w-5 text-accent" />
-              2 minutos para clareza total
+              O segredo dos signos que prosperam em grandes transições astrológicas
             </li>
             <li className="flex items-center gap-2">
               <CheckCircle className="h-5 w-5 text-accent" />
-              Baseado em trânsitos reais de 2025
+              Apenas 1 minuto para clareza total
             </li>
           </ul>
         </Card>
