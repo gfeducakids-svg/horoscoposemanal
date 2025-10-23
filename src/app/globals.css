@@ -8,8 +8,10 @@
     --deep-purple: 273 66% 11%; /* #1A0B2E */
     --vibrant-purple: 275 62% 43%; /* #7B2CBF */
     --soft-lilac: 279 100% 74%; /* #C77DFF */
+    --light-lilac-bg: 278 100% 97%; /* #FAF5FF */
     --cosmic-gold: 47 100% 52%; /* #FFD60A */
     --success-green: 158 95% 42%; /* #06D6A0 */
+    --cta-green: 147 50% 47%; /* #27ae60 */
     --urgency-red: 347 85% 62%; /* #EF476F */
 
     --background: var(--cosmic-night);
@@ -70,6 +72,9 @@
   body {
     @apply bg-background text-foreground;
     background-color: hsl(var(--cosmic-night));
+  }
+  .bg-light-lilac {
+    background-color: hsl(var(--light-lilac-bg));
   }
 }
 
@@ -166,11 +171,11 @@
 @keyframes pulse-glow-green {
     0%, 100% {
         transform: scale(1);
-        box-shadow: 0 0 20px hsla(var(--success-green), 0.5);
+        box-shadow: 0 0 20px hsl(var(--cta-green), 0.5);
     }
     50% {
         transform: scale(1.05);
-        box-shadow: 0 0 40px hsla(var(--success-green), 0.8);
+        box-shadow: 0 0 40px hsl(var(--cta-green), 0.8);
     }
 }
 
