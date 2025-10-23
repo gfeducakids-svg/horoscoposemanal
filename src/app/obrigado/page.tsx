@@ -89,8 +89,8 @@ export default function ObrigadoPage() {
                              <p className="text-deep-purple/80 mb-4">Normalmente, este diagnóstico é vendido por <span className="line-through">R$249</span> em consultas individuais. Mas como você acabou de se tornar aluna do Recomeços Cósmicos 2025, poderá acessar tudo por apenas <span className="font-bold">R$39,90</span> — pagamento único e acesso vitalício.</p>
 
                             <div className="bg-vibrant-purple/10 rounded-lg p-6 my-6 text-left">
-                                <h4 className="font-headline font-bold text-lg mb-4 text-vibrant-purple">Você vai receber:</h4>
-                                <ul className="space-y-2">
+                                <h4 className="font-headline font-bold text-lg mb-4 text-dark-gray">Você vai receber:</h4>
+                                <ul className="space-y-2 text-dark-gray">
                                     {bonuses.map((bonus, index) => (
                                         <li key={index} className="flex items-center gap-2">
                                             <Gift className="w-5 h-5 text-cosmic-gold" />
@@ -123,11 +123,11 @@ export default function ObrigadoPage() {
                     <p className="font-headline text-xl text-vibrant-purple mb-6">Eu sei qual caminho o universo está te mostrando. <br/> Clique abaixo e siga esse sinal.</p>
 
                     <Button className="w-full h-auto text-2xl font-bold py-6 px-8 rounded-lg bg-cta-green text-white hover:bg-cta-green/90 animate-pulse-glow" style={{ animationName: 'pulse-glow-green' }}>
-                         ✅ SIM! QUERO MEU MAPA DA CLAREZA AGORA
+                         EU QUERO
                     </Button>
-                    <a href="#" className="text-sm text-deep-purple/60 hover:text-deep-purple mt-4 inline-block">
-                        Não, obrigado. Prefiro continuar sem entender o que o universo tenta me dizer.
-                    </a>
+                    <Button variant="link" className="text-urgency-red hover:text-urgency-red/80 mt-4">
+                        Não, obrigado, quero apenas o meu produto
+                    </Button>
                 </section>
             </div>
         </div>
