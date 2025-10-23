@@ -1,9 +1,8 @@
 'use client';
 import Image from 'next/image';
-import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import placeholderImages from '@/lib/placeholder-images.json';
 
-const carouselItems = placeholderImages.whatYouGet;
+const whatYouGetItems = placeholderImages.whatYouGet;
 
 const BonusCard = ({ title, value, children }: { title: string; value: string; children: React.ReactNode }) => (
     <div className="perspective-1000">
@@ -24,7 +23,7 @@ const BonusCard = ({ title, value, children }: { title: string; value: string; c
 
 export function OfferSection() {
   return (
-    <section className="py-20 px-4 bg-slate-50 text-dark-gray">
+    <section className="py-20 px-4 bg-light-gray text-dark-gray">
       <div className="container mx-auto max-w-5xl">
         <div className="text-center mb-12">
           <h2 className="font-headline text-4xl md:text-5xl font-extrabold text-vibrant-purple mb-4">
@@ -42,40 +41,28 @@ export function OfferSection() {
           <h3 className="text-center font-headline text-3xl md:text-4xl font-bold text-deep-purple mb-12">
               📦 O que você vai receber:
           </h3>
-          <Carousel
-            opts={{
-              align: "start",
-              loop: true,
-            }}
-            className="w-full"
-          >
-            <CarouselContent>
-              {carouselItems.map((item, index) => (
-                <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
-                  <div className="p-1">
-                    <div className="bg-white p-6 rounded-2xl border border-vibrant-purple/10 shadow-lg h-full flex flex-col">
-                      <div className="relative w-full h-48 mb-4">
-                          <Image
-                              src={item.image}
-                              alt={item.title}
-                              fill
-                              className="rounded-lg object-cover"
-                              data-ai-hint={item.imageHint}
-                          />
-                      </div>
-                      <h3 className="font-headline text-xl text-vibrant-purple font-bold mb-2">{item.title}</h3>
-                      <p className="font-body text-medium-gray text-sm flex-grow">{item.description}</p>
-                      <span className="mt-4 inline-block bg-cosmic-gold/20 text-cosmic-gold text-xs font-bold px-3 py-1 rounded-full self-start">
-                          {item.badge}
-                      </span>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {whatYouGetItems.map((item, index) => (
+                <div key={index} className="p-1">
+                  <div className="bg-white p-6 rounded-2xl border border-vibrant-purple/10 shadow-lg h-full flex flex-col">
+                    <div className="relative w-full h-48 mb-4">
+                        <Image
+                            src={item.image}
+                            alt={item.title}
+                            fill
+                            className="rounded-lg object-cover"
+                            data-ai-hint={item.imageHint}
+                        />
                     </div>
+                    <h3 className="font-headline text-xl text-vibrant-purple font-bold mb-2">{item.title}</h3>
+                    <p className="font-body text-medium-gray text-sm flex-grow">{item.description}</p>
+                    <span className="mt-4 inline-block bg-cosmic-gold/20 text-cosmic-gold text-xs font-bold px-3 py-1 rounded-full self-start">
+                        {item.badge}
+                    </span>
                   </div>
-                </CarouselItem>
+                </div>
               ))}
-            </CarouselContent>
-            <CarouselPrevious className="text-deep-purple hover:text-vibrant-purple bg-white hover:bg-slate-100 border-vibrant-purple/50 left-[-10px] md:left-[-50px]" />
-            <CarouselNext className="text-deep-purple hover:text-vibrant-purple bg-white hover:bg-slate-100 border-vibrant-purple/50 right-[-10px] md:right-[-50px]" />
-          </Carousel>
+          </div>
         </div>
         
         <div className="grid md:grid-cols-2 gap-8">
