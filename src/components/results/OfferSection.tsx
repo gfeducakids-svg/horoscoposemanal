@@ -1,6 +1,5 @@
 'use client';
 import Image from 'next/image';
-import { Star, Zap, ShieldCheck } from 'lucide-react';
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import placeholderImages from '@/lib/placeholder-images.json';
 
@@ -77,25 +76,6 @@ export function OfferSection() {
             <CarouselPrevious className="text-deep-purple hover:text-vibrant-purple bg-white hover:bg-slate-100 border-vibrant-purple/50 left-[-10px] md:left-[-50px]" />
             <CarouselNext className="text-deep-purple hover:text-vibrant-purple bg-white hover:bg-slate-100 border-vibrant-purple/50 right-[-10px] md:right-[-50px]" />
           </Carousel>
-        </div>
-
-
-        <div className="grid md:grid-cols-3 gap-8 mb-16 text-center">
-          <div className="flex flex-col items-center">
-            <Star className="w-12 h-12 text-vibrant-purple mb-4" />
-            <h3 className="font-headline text-xl font-bold text-deep-purple mb-2">Sistema de Sincronicidade</h3>
-            <p className="font-body text-medium-gray">Analisa 7 planetas-chave para identificar suas "zonas de clareza", alinhando mente e intuição.</p>
-          </div>
-          <div className="flex flex-col items-center">
-            <Zap className="w-12 h-12 text-vibrant-purple mb-4" />
-            <h3 className="font-headline text-xl font-bold text-deep-purple mb-2">Previsões Instantâneas</h3>
-            <p className="font-body text-medium-gray">Receba toda segunda-feira a leitura energética da semana com alertas de trânsitos críticos.</p>
-          </div>
-          <div className="flex flex-col items-center">
-            <ShieldCheck className="w-12 h-12 text-vibrant-purple mb-4" />
-            <h3 className="font-headline text-xl font-bold text-deep-purple mb-2">Guia Prático de Ação</h3>
-            <p className="font-body text-medium-gray">Orientações claras de O QUE fazer, QUANDO fazer e o que EVITAR, sem jargões complicados.</p>
-          </div>
         </div>
         
         <div className="grid md:grid-cols-2 gap-8">

@@ -19,6 +19,7 @@ import { FinalCTASection } from '@/components/results/FinalCTASection';
 import { GuaranteeSection } from '@/components/results/GuaranteeSection';
 import { FAQSection } from '@/components/results/FAQSection';
 import { FooterSection } from '@/components/results/FooterSection';
+import { BenefitsSection } from '@/components/results/BenefitsSection';
 
 interface AIResult {
   revelation: GenerateCosmicEnergyRevelationOutput | null;
@@ -109,9 +110,10 @@ function ResultContent() {
       <TransitionSection />
       <OfferSection />
       <ValueSection />
+      <BenefitsSection />
       <SocialProofSection />
-      <FinalCTASection />
       <GuaranteeSection />
+      <FinalCTASection />
       <FAQSection />
       <FooterSection />
     </div>
