@@ -36,7 +36,6 @@ export function GenericQuestionStep({ step }: GenericQuestionStepProps) {
     5: 'Entendi... isso faz muito sentido.\n\nAgora uma pergunta importante:',
     6: 'Você tá se entendendo melhor a cada resposta... 💫\n\nMe diz:',
     8: 'Quase lá... respira fundo 🌙\n\nSobre seus relacionamentos (amorosos ou não):',
-    9: 'Última pergunta antes de revelar sua energia cósmica...\n\nSe você pudesse sentir UMA COISA agora mesmo, seria:',
   }
 
   return (
