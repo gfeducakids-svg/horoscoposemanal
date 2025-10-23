@@ -8,26 +8,25 @@ interface HeroSectionProps {
 }
 
 export function HeroSection({ sign }: HeroSectionProps) {
-
   return (
-    <section className="relative min-h-[70vh] w-full flex items-center justify-center text-center p-6 overflow-hidden">
+    <section className="relative w-full flex items-center justify-center text-center p-6 pt-24 pb-12 overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-b from-cosmic-night via-deep-purple to-cosmic-night">
         <div id="stars"></div>
         <div id="stars2"></div>
         <div id="stars3"></div>
       </div>
-      <div className="relative z-10 flex flex-col items-center max-w-3xl mx-auto mt-20">
-        <div className="mb-10">
+      <div className="relative z-10 flex flex-col items-center max-w-3xl mx-auto">
+        <div className="mb-6">
           <div className="relative w-32 h-32 md:w-36 md:h-36 flex items-center justify-center rounded-full bg-gradient-to-br from-vibrant-purple to-soft-lilac border-2 border-white/10 shadow-[0_0_60px_rgba(199,125,255,0.6)]">
             <ZodiacIcon sign={sign.id} className="w-20 h-20 md:w-24 md:h-24 text-white" />
           </div>
         </div>
 
-        <h3 className="font-body text-sm md:text-base text-white/70 tracking-wider mb-2 animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
+        <h3 className="font-body text-sm md:text-base text-white/70 tracking-wider mb-8 animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
             Exploradora Cósmica, os astros confirmam...
         </h3>
 
-        <div className="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce flex flex-col items-center gap-2 text-soft-lilac">
+        <div className="animate-bounce flex flex-col items-center gap-2 text-soft-lilac">
             <span className="text-xs font-body">Role para ver sua revelação</span>
             <ArrowDown className="w-6 h-6" />
         </div>
