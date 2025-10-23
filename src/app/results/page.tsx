@@ -12,7 +12,6 @@ import { SocialProofSection } from '@/components/results/SocialProofSection';
 import { GuaranteeSection } from '@/components/results/GuaranteeSection';
 import { FAQSection } from '@/components/results/FAQSection';
 import { FooterSection } from '@/components/results/FooterSection';
-import { BenefitsSection } from '@/components/results/BenefitsSection';
 
 
 function ResultContent() {
@@ -48,9 +47,8 @@ function ResultContent() {
       <InsightsSection sign={quizState.answers.sign as any} />
       <TransitionSection />
       <OfferSection />
-      <BenefitsSection />
-      <GuaranteeSection />
       <SocialProofSection />
+      <GuaranteeSection />
       <FAQSection />
       <FooterSection />
     </div>

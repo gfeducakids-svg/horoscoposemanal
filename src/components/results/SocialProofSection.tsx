@@ -11,7 +11,7 @@ export function SocialProofSection() {
     <section className="py-20 px-4 bg-cosmic-night">
       <div className="container mx-auto max-w-6xl">
         <h2 className="text-center font-headline text-3xl md:text-4xl font-bold text-white mb-12">
-          💬 Veja o que quem já usa está dizendo:
+          Dá uma olhada nessas avaliações
         </h2>
         <Carousel
           opts={{
