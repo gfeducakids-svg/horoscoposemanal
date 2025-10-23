@@ -39,7 +39,7 @@ export default function LandingPage() {
         <Link href="/quiz">
           <Button size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90 font-bold text-lg py-8 px-10 rounded-full shadow-lg shadow-accent/20 transition-transform transform hover:scale-105">
             <Sparkles className="mr-2 h-6 w-6" />
-            COMEÇAR MEU DIAGNÓSTICO ASTROLÓGICO
+            COMEÇAR GRATUITAMENTE
             <Sparkles className="ml-2 h-6 w-6" />
           </Button>
         </Link>
