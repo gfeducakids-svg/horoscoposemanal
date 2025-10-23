@@ -12,7 +12,7 @@ export default function LandingPage() {
         <UrgencyTimer />
         <div className="mb-8 w-full">
           <Image
-            src="https://i.imgur.com/6BOMqLR.png"
+            src="https://i.imgur.com/6B87EKP.png"
             alt="Energia Cósmica"
             width={800}
             height={800}
