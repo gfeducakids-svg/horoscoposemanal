@@ -23,12 +23,23 @@ export default function RootLayout({
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet" />
         <link rel="preconnect" href="https://i.imgur.com" />
         <Script
+          id="utmify-base"
           src="https://cdn.utmify.com.br/scripts/utms/latest.js"
           data-utmify-prevent-xcod-sck
           data-utmify-prevent-subids
           async
           defer
         ></Script>
+        <Script id="utmify-pixel" strategy="afterInteractive">
+          {`
+            window.pixelId = "68fa7dd577fb2848e6bf6114";
+            var a = document.createElement("script");
+            a.setAttribute("async", "");
+            a.setAttribute("defer", "");
+            a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel.js");
+            document.head.appendChild(a);
+          `}
+        </Script>
       </head>
       <body className="font-body antialiased">
         <StarryBackground />
