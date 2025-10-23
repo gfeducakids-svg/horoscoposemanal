@@ -22,12 +22,12 @@ export function HeroSection({ sign }: HeroSectionProps) {
           </div>
         </div>
 
-        <h3 className="font-body text-sm md:text-base text-white/70 tracking-wider mb-8 animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
+        <h3 className="font-body text-base md:text-lg text-white/70 tracking-wider mb-8 animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
             Exploradora Cósmica, os astros confirmam...
         </h3>
 
         <div className="animate-bounce flex flex-col items-center gap-2 text-soft-lilac">
-            <span className="text-xs font-body">Role para ver sua revelação</span>
+            <span className="text-sm font-body">Role para ver sua revelação</span>
             <ArrowDown className="w-6 h-6" />
         </div>
       </div>
