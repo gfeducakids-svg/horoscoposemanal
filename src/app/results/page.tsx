@@ -3,7 +3,7 @@
 import { Suspense, useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { QuizState } from '@/context/QuizContext';
-import { zodiacSigns, type Sign } from '@/lib/quiz-data';
+import { zodiacSigns } from '@/lib/quiz-data';
 import { HeroSection } from '@/components/results/HeroSection';
 import { InsightsSection } from '@/components/results/InsightsSection';
 import { TransitionSection } from '@/components/results/TransitionSection';
@@ -12,7 +12,7 @@ import { SocialProofSection } from '@/components/results/SocialProofSection';
 import { GuaranteeSection } from '@/components/results/GuaranteeSection';
 import { FAQSection } from '@/components/results/FAQSection';
 import { FooterSection } from '@/components/results/FooterSection';
-import { CtaButtonSection } from '@/components/results/CtaButtonSection';
+import { WhatYouGetSection } from '@/components/results/WhatYouGetSection';
 
 
 function ResultContent() {
@@ -45,10 +45,9 @@ function ResultContent() {
   return (
     <div className="bg-cosmic-night text-white w-full overflow-x-hidden">
       <HeroSection sign={signData} quizAnswers={quizState.answers} />
-      <InsightsSection sign={quizState.answers.sign as Sign} />
+      <InsightsSection sign={quizState.answers.sign as any} />
       <TransitionSection />
       <OfferSection />
-      <CtaButtonSection />
       <SocialProofSection />
       <GuaranteeSection />
       <FAQSection />
