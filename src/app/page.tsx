@@ -1,5 +1,6 @@
 import Link from 'next/link';
-import { Sparkles, Star, CheckCircle } from 'lucide-react';
+import Image from 'next/image';
+import { Sparkles, CheckCircle } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 
@@ -8,8 +9,16 @@ export default function LandingPage() {
     <div className="relative min-h-screen w-full flex items-center justify-center p-4 overflow-hidden">
       <div className="relative z-10 flex flex-col items-center text-center max-w-2xl mx-auto">
         <div className="mb-6">
-          <Sparkles className="h-12 w-12 text-accent" />
+          <Image
+            src="https://i.imgur.com/6BOMqLR.png"
+            alt="Energia Cósmica"
+            width={200}
+            height={200}
+            className="rounded-full border-2 border-accent/50 shadow-lg shadow-accent/20"
+            priority
+          />
         </div>
+
         <h1 className="font-headline text-3xl md:text-5xl font-bold text-slate-100 mb-10">
           Descubra qual energia cósmica guia o seu recomeço em 2025
         </h1>
