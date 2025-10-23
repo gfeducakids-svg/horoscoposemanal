@@ -105,7 +105,7 @@ export default function ObrigadoPage() {
                                 <p className="text-5xl font-extrabold">R$19,90</p>
                                 <p className="text-lg text-cta-green font-bold">(92% OFF)</p>
                             </div>
-                             <p className="text-sm text-deep-purple/70">Menos que um almoço ou uma netflix — e o retorno é clareza por um ano inteiro.</p>
+                             <p className="text-sm text-deep-purple/70">Menos que um almoço ou uma netflix. O retorno e a clareza é por um ano inteiro.</p>
 
                         </CardContent>
                     </Card>
