@@ -93,7 +93,7 @@ export function ChatWidget() {
           <CardHeader className="flex flex-row items-center justify-between bg-vibrant-purple text-primary-foreground">
             <div className="flex items-center space-x-3">
               <Avatar>
-                <AvatarImage src="https://i.imgur.com/3BoS5c5.png" alt="Saturno" />
+                <AvatarImage src="https://i.imgur.com/kOtWxL8.jpeg" alt="Saturno" />
                 <AvatarFallback>S</AvatarFallback>
               </Avatar>
               <div>
@@ -129,7 +129,7 @@ export function ChatWidget() {
                     >
                         {message.role === 'model' && (
                         <Avatar className="h-8 w-8">
-                            <AvatarImage src="https://i.imgur.com/3BoS5c5.png" alt="Saturno" />
+                            <AvatarImage src="https://i.imgur.com/kOtWxL8.jpeg" alt="Saturno" />
                             <AvatarFallback>S</AvatarFallback>
                         </Avatar>
                         )}
@@ -148,7 +148,7 @@ export function ChatWidget() {
                     {isLoading && (
                     <div className="flex items-end gap-2 justify-start">
                         <Avatar className="h-8 w-8">
-                        <AvatarImage src="https://i.imgur.com/3BoS5c5.png" alt="Saturno" />
+                        <AvatarImage src="https://i.imgur.com/kOtWxL8.jpeg" alt="Saturno" />
                         <AvatarFallback>S</AvatarFallback>
                         </Avatar>
                         <div className="rounded-lg px-4 py-2 bg-cosmic-night flex items-center space-x-1">
