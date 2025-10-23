@@ -108,8 +108,8 @@ function ResultContent() {
       <HeroSection sign={signData} quizAnswers={quizState.answers} />
       <InsightsSection analysis={result.analysis} />
       <TransitionSection />
-      <OfferSection />
       <WhatYouGetSection />
+      <OfferSection />
       <ValueSection />
       <SocialProofSection />
       <FinalCTASection />
