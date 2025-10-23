@@ -70,9 +70,6 @@ const prompt = ai.definePrompt({
   Relationship Challenge: {{{relationshipChallenge}}}
   Mental Overload: {{{overloadMental}}}
   Deepest Desire: {{{deepestDesire}}}
-
-  Assessment:
-  {{output schema='AnalyzeDecisionPatternsOutputSchema'}}
   `,
 });
 
