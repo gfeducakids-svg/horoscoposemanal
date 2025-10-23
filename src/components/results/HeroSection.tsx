@@ -49,7 +49,7 @@ export function HeroSection({ sign, quizAnswers }: HeroSectionProps) {
           Os próximos 90 dias serão os mais importantes da sua vida. <br/>
           E eu vou te mostrar EXATAMENTE o que fazer.
         </p>
-        <div className="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce flex flex-col items-center gap-2 text-soft-lilac">
+        <div className="mt-12 animate-bounce flex flex-col items-center gap-2 text-soft-lilac">
           <span className="font-body text-sm">Descubra o que os astros revelaram</span>
           <ArrowDown className="w-6 h-6" />
         </div>
