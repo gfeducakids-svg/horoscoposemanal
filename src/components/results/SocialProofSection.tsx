@@ -21,12 +21,12 @@ export function SocialProofSection() {
         >
           <CarouselContent className="-ml-4">
             {testimonials.map((item, index) => (
-              <CarouselItem key={index} className="pl-4 md:basis-1/2 lg:basis-1/3">
+              <CarouselItem key={index} className="pl-4 basis-1/2 md:basis-1/3 lg:basis-1/4">
                 <Card className="overflow-hidden bg-deep-purple border-vibrant-purple/20">
                   <CardContent className="p-0">
                     <video 
                       controls 
-                      className="w-full h-full object-cover aspect-video"
+                      className="w-full h-full object-cover aspect-[9/16]"
                       poster={item.thumbnailUrl}
                     >
                       <source src={item.videoUrl} type="video/mp4" />
