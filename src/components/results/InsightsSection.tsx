@@ -21,31 +21,6 @@ const InsightCard = ({ icon, title, text, animation, delay }: { icon: React.Reac
   </Card>
 );
 
-const LoadingSkeleton = () => (
-    <div className="space-y-8">
-        <div className="bg-deep-purple/50 border-vibrant-purple/30 p-6 rounded-2xl shadow-lg animate-pulse">
-            <div className="flex items-center gap-4 mb-4">
-                <div className="w-10 h-10 rounded-full bg-cosmic-gold/50"></div>
-                <div className="h-6 bg-soft-lilac/50 rounded w-1/2"></div>
-            </div>
-            <div className="space-y-2">
-                <div className="h-4 bg-slate-300/50 rounded w-full"></div>
-                <div className="h-4 bg-slate-300/50 rounded w-5/6"></div>
-            </div>
-        </div>
-        <div className="bg-deep-purple/50 border-vibrant-purple/30 p-6 rounded-2xl shadow-lg animate-pulse">
-            <div className="flex items-center gap-4 mb-4">
-                <div className="w-10 h-10 rounded-full bg-cosmic-gold/50"></div>
-                <div className="h-6 bg-soft-lilac/50 rounded w-1/2"></div>
-            </div>
-            <div className="space-y-2">
-                <div className="h-4 bg-slate-300/50 rounded w-full"></div>
-                <div className="h-4 bg-slate-300/50 rounded w-5/6"></div>
-            </div>
-        </div>
-    </div>
-)
-
 export function InsightsSection({ analysis, isLoading }: InsightsSectionProps) {
   const insights = analysis?.insights || [];
   const recommendations = analysis?.recommendations || [];
@@ -53,9 +28,6 @@ export function InsightsSection({ analysis, isLoading }: InsightsSectionProps) {
   return (
     <section className="py-20 px-4">
       <div className="container mx-auto max-w-4xl text-center">
-        <h2 className="font-headline text-3xl md:text-4xl font-bold text-white mb-12">
-          O que eu vi no seu <span className="text-cosmic-gold">perfil energético</span>:
-        </h2>
         {isLoading ? (
             <div className="grid grid-cols-1 gap-8">
                 <div className="flex items-center justify-center text-center text-white p-8 rounded-2xl bg-deep-purple/50 border border-vibrant-purple/30">
