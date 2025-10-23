@@ -1,26 +1,16 @@
 'use client';
 import Image from 'next/image';
-import placeholderImages from '@/lib/placeholder-images.json';
 import { ArrowRight, Lock, Clock, Mail } from 'lucide-react';
 
-const whatYouGetItems = placeholderImages.whatYouGet;
+const offerImages = [
+  "https://i.imgur.com/lVxmRVk.png",
+  "https://i.imgur.com/56gzLhW.png",
+  "https://i.imgur.com/URcxczR.png",
+  "https://i.imgur.com/lYGJsiX.png",
+  "https://i.imgur.com/2z0V6ih.png",
+  "https://i.imgur.com/JY1N6lD.png",
+];
 
-const BonusCard = ({ title, value, children }: { title: string; value: string; children: React.ReactNode }) => (
-    <div className="perspective-1000">
-        <div className="relative w-full h-64 transform-style-3d transition-transform duration-700 group hover:rotate-y-180">
-            {/* Front */}
-            <div className="absolute w-full h-full backface-hidden bg-deep-purple border-2 border-soft-lilac/30 rounded-2xl flex flex-col justify-center items-center p-4 text-center">
-                <span className="absolute top-2 right-2 bg-cosmic-gold text-deep-purple text-xs font-bold px-2 py-1 rounded-full">BÔNUS</span>
-                <h4 className="font-headline text-xl text-white font-bold mb-2">{title}</h4>
-                <p className="font-body text-slate-300">Valor: <span className="line-through">R$ {value}</span></p>
-            </div>
-            {/* Back */}
-            <div className="absolute w-full h-full backface-hidden bg-soft-lilac text-deep-purple rounded-2xl p-6 transform rotate-y-180">
-                {children}
-            </div>
-        </div>
-    </div>
-);
 
 export function OfferSection() {
   return (
@@ -32,50 +22,29 @@ export function OfferSection() {
           </h2>
         </div>
 
-        <div className="mb-16">
-            <div className="grid grid-cols-3 md:grid-cols-5 gap-2">
-                {whatYouGetItems.map((item, index) => (
-                    <div key={index} className="relative aspect-square w-full">
-                        <Image
-                            src={item.image}
-                            alt={item.title}
-                            fill
-                            className="rounded-lg object-cover"
-                            data-ai-hint={item.imageHint}
-                        />
-                    </div>
-                ))}
-            </div>
-        </div>
-        
-        <div className="grid md:grid-cols-2 gap-8">
-           <BonusCard title="GUIA DOS GRANDES TRÂNSITOS 2025-2026" value="97,00">
-               <h5 className="font-headline text-lg font-bold mb-2">Descubra as 5 conjunções que vão reger os próximos dois anos.</h5>
-               <ul className="font-body text-sm space-y-1">
-                   <li>→ Plutão em Aquário (até 2044)</li>
-                   <li>→ Netuno em Áries (2025-2039)</li>
-                   <li>→ Urano em Gêmeos (2025-2033)</li>
-                   <li>→ Saturno em Peixes → Áries (2023-2026)</li>
-                   <li>→ Júpiter em Câncer (2025-2026)</li>
-               </ul>
-           </BonusCard>
-            <BonusCard title="MAPA LUNAR DA MANIFESTAÇÃO" value="67,00">
-               <h5 className="font-headline text-lg font-bold mb-2">Aprenda a usar as 8 fases da Lua para:</h5>
-               <ul className="font-body text-sm space-y-1">
-                   <li>→ Definir intenções (Lua Nova)</li>
-                   <li>→ Agir com força (Lua Crescente)</li>
-                   <li>→ Colher resultados (Lua Cheia)</li>
-                   <li>→ Liberar bloqueios (Lua Minguante)</li>
-               </ul>
-           </BonusCard>
+        <div className="max-w-2xl mx-auto space-y-4 mb-16">
+            {offerImages.map((src, index) => (
+                <div key={index} className="relative w-full">
+                    <Image
+                        src={src}
+                        alt={`Offer image ${index + 1}`}
+                        width={800}
+                        height={450}
+                        className="rounded-lg object-cover w-full h-auto"
+                    />
+                    {(index === 4 || index === 5) && (
+                        <span className="absolute top-3 right-3 bg-cosmic-gold text-deep-purple text-sm font-bold px-3 py-1.5 rounded-full shadow-lg">BÔNUS</span>
+                    )}
+                </div>
+            ))}
         </div>
         
         <div className="text-center mt-20">
           <div className="container mx-auto max-w-2xl text-center font-headline text-dark-gray mb-8">
               <div className="border-y-2 border-dashed border-vibrant-purple py-6 px-4">
-                  <p className="text-lg">VALOR TOTAL: <span className="line-through">R$ 211,00</span></p>
+                  <p className="text-lg">VALOR TOTAL: <span className="line-through">R$ 99,90</span></p>
                   <p className="text-3xl md:text-4xl my-2">VOCÊ PAGA HOJE: <span className="text-vibrant-purple font-extrabold">R$ 29,90</span></p>
-                  <p className="text-lg text-success-green font-bold">ECONOMIA: R$ 181,10 (86% OFF)</p>
+                  <p className="text-lg text-success-green font-bold">ECONOMIA: R$ 70,00 (70% OFF)</p>
               </div>
           </div>
           <a
