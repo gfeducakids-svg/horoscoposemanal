@@ -7,7 +7,7 @@ import { Card } from '@/components/ui/card';
 export default function LandingPage() {
   return (
     <div className="relative min-h-screen w-full flex items-center justify-center p-4 overflow-hidden">
-      <div className="relative z-10 flex flex-col items-center text-center max-w-3xl mx-auto">
+      <div className="relative z-10 flex flex-col items-center text-center w-full max-w-3xl mx-auto">
         <div className="mb-8 w-full">
           <Image
             src="https://i.imgur.com/6BOMqLR.png"
