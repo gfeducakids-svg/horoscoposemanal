@@ -120,8 +120,6 @@ export default function ObrigadoPage() {
                      <p className="text-deep-purple/80 mb-6">Se dentro de 7 dias você sentir que o mapa não trouxe clareza, devolvo 100% do seu dinheiro. Sem perguntas, sem burocracia. Todo risco é meu.</p>
                      <p className="font-bold text-urgency-red mb-8">Mas atenção: essa página aparece apenas uma vez. Quando sair dela, a oferta expira e os bônus desaparecem.</p>
 
-                    <p className="font-headline text-xl text-vibrant-purple mb-6">Eu sei qual caminho o universo está te mostrando. <br/> Clique abaixo e siga esse sinal.</p>
-
                     <a href="https://pay.kiwify.com.br/9Y9PJSZ" target="_blank" rel="noopener noreferrer">
                         <Button className="w-full h-auto text-xl font-bold py-4 px-8 rounded-lg bg-cta-green text-white hover:bg-cta-green/90 animate-pulse-glow" style={{ animationName: 'pulse-glow-green' }}>
                             EU QUERO
@@ -135,5 +133,3 @@ export default function ObrigadoPage() {
         </div>
     );
 }
-
-    
