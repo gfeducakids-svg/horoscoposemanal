@@ -6,10 +6,12 @@ import { generateCosmicEnergyRevelation } from '@/ai/flows/generate-cosmic-energ
 import type { GenerateCosmicEnergyRevelationInput } from '@/ai/flows/generate-cosmic-energy-revelation';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
-import { Loader, Sparkles, Star, ShieldCheck } from 'lucide-react';
+import { Loader, Sparkles, Star, ShieldCheck, Zap, Target, CheckCircle } from 'lucide-react';
 import { QuizState } from '@/context/QuizContext';
 import ZodiacIcon from '@/components/icons/ZodiacIcon';
 import { zodiacSigns } from '@/lib/quiz-data';
+import ReactMarkdown from 'react-markdown';
+import remarkGfm from 'remark-gfm';
 
 function ResultContent() {
   const router = useRouter();
@@ -58,33 +60,6 @@ function ResultContent() {
 
     runAI();
   }, [router]);
-
-  const renderResultText = (text: string) => {
-    // Replace markdown-like headers with styled components
-    let processedText = text
-      .replace(/🔮\s*(.*?)\s*–\s*(.*?)\n/g, '<h1 class="font-headline text-2xl md:text-3xl text-accent mb-2">🔮 $1 – $2</h1>')
-      .replace(/✨\s*SEU RECOMEÇO CHEGOU\./g, '<h2 class="font-headline text-xl md:text-2xl text-slate-100 my-4">✨ SEU RECOMEÇO CHEGOU.</h2>')
-      .replace(/😮\s*SURPRESA\?/g, '<h2 class="font-headline text-xl md:text-2xl text-slate-100 my-4">😮 SURPRESA?</h2>')
-      .replace(/A BOA NOTÍCIA\?/g, '<h2 class="font-headline text-xl md:text-2xl text-slate-100 my-4">A BOA NOTÍCIA?</h2>')
-      .replace(/✨\s*(.*?ativando.*?)\n/g, '<p class="flex items-start gap-2 my-2"><Sparkles class="h-5 w-5 text-accent flex-shrink-0 mt-1" /><span>$1</span></p>')
-      .replace(/⚡\s*(.*?)\n/g, '<p class="flex items-start gap-2 my-2"><Zap class="h-5 w-5 text-yellow-400 flex-shrink-0 mt-1" /><span>$1</span></p>')
-      .replace(/🎯\s*(.*?)\n/g, '<p class="flex items-start gap-2 my-2"><Target class="h-5 w-5 text-red-400 flex-shrink-0 mt-1" /><span>$1</span></p>')
-      .replace(/→\s*(.*?)\n/g, '<p class="flex items-center gap-2 my-1"><CheckCircle class="h-5 w-5 text-green-400 flex-shrink-0" /><span>$1</span></p>');
-
-    const sections = processedText.split('───────────────────');
-    
-    return sections.map((section, index) => (
-      <div key={index}>
-        <div
-          className="whitespace-pre-wrap font-body text-slate-300 text-lg leading-relaxed space-y-2"
-          dangerouslySetInnerHTML={{ __html: section.trim() }}
-        />
-        {index < sections.length - 1 && (
-          <div className="w-full h-px bg-border/20 my-8" />
-        )}
-      </div>
-    ));
-  };
   
   const signData = zodiacSigns.find(s => s.id === quizState?.answers.sign);
 
@@ -116,7 +91,37 @@ function ResultContent() {
               </div>
             )}
             {result ? (
-              renderResultText(result)
+              <ReactMarkdown
+                remarkPlugins={[remarkGfm]}
+                className="prose prose-invert font-body text-slate-300 text-lg leading-relaxed space-y-4 w-full"
+                components={{
+                  h1: ({node, ...props}) => <h1 className="font-headline text-2xl md:text-3xl text-accent mb-2" {...props} />,
+                  h2: ({node, ...props}) => <h2 className="font-headline text-xl md:text-2xl text-slate-100 my-4" {...props} />,
+                  hr: ({node, ...props}) => <hr className="border-border/20 my-8" {...props} />,
+                  p: ({node, ...props}) => {
+                    const text = node.children[0]?.type === 'text' ? node.children[0].value : '';
+                    if (text.startsWith('✨')) {
+                      return <p className="flex items-start gap-2 my-2"><Sparkles className="h-5 w-5 text-accent flex-shrink-0 mt-1" /><span>{text.substring(1).trim()}</span></p>
+                    }
+                    if (text.startsWith('⚡')) {
+                      return <p className="flex items-start gap-2 my-2"><Zap className="h-5 w-5 text-yellow-400 flex-shrink-0 mt-1" /><span>{text.substring(1).trim()}</span></p>
+                    }
+                    if (text.startsWith('🎯')) {
+                      return <p className="flex items-start gap-2 my-2"><Target className="h-5 w-5 text-red-400 flex-shrink-0 mt-1" /><span>{text.substring(1).trim()}</span></p>
+                    }
+                     if (text.startsWith('→')) {
+                      return <p className="flex items-center gap-2 my-1"><CheckCircle className="h-5 w-5 text-green-400 flex-shrink-0" /><span>{text.substring(1).trim()}</span></p>
+                    }
+                    return <p {...props} />
+                  },
+                }}
+              >
+                {result.replace(/🔮\s*(.*?)\s*–\s*(.*?)\n/g, '# 🔮 $1 – $2\n')
+                       .replace(/✨\s*SEU RECOMEÇO CHEGOU\./g, '## ✨ SEU RECOMEÇO CHEGOU.')
+                       .replace(/😮\s*SURPRESA\?/g, '## 😮 SURPRESA?')
+                       .replace(/A BOA NOTÍCIA\?/g, '## A BOA NOTÍCIA?')
+                       .replace(/───────────────────/g, '\n---\n')}
+              </ReactMarkdown>
             ) : (
                <p className="font-body text-slate-300 text-lg">Nenhum resultado para exibir.</p>
             )}
